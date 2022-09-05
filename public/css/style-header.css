@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    width: 100%;
+}
+#header #use-black {
+    width: 100%;
+    height: 43px;
+    background: #212121;
+    float: left;
+}
+#header .icon {
+    margin-top: 2.1%;
+    margin-left: 3%;
+    width: 230px;
+    height: 40px;
+
+    background-size: 230px 40px;
+    float: left;
+}
+#header input {
+    color: #cecece;
+    padding-left: 2%;
+    margin-top: 3%;
+    width: 28%;
+    height: 40px;
+    float: left;
+    margin-left: 13%;
+    border: 1px solid #cecece;
+    border-radius: 3px 0px 0px 3px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+}
+#header input:focus {
+    outline: none;
+    box-shadow: 2px 2px 2px 2px #eeeeee;
+    transition: 900ms;
+}
+
+#header .but-he {
+    margin-top: 3%;
+    float: left;
+    margin-left: 0;
+    height: 40px;
+    width: 6%;
+    border: 0;
+    background: #212121;
+    cursor: pointer;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 0 3px 3px 0px;
+}
+#header .but-he:hover {
+    background: #454d5c;
+    transition: 500ms;
+}
+#serchhe img {
+    margin-top: 3.5%;
+    float: left;
+    margin-left: 2%;
+}
+#header .tel {
+    float: left;
+    margin-top: 2.7%;
+    margin-left: 0.5%;
+    font-family: 'Lato', sans-serif;
+    color: #7d7d7f;
+    font-size: 15px;
+}
+#header .tel a {
+    float: left;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bolder;
+    color: #212121;
+    font-size: 20px;
+    text-decoration: none;
+}
+#header .cart img {
+    float: left;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+#header .cart img:hover {
+    cursor: pointer;
+}
+#header .cart .counter {
+    float: left;
+    position: relative;
+    right: 7px;
+    bottom: 7px;
+    margin-top: 3%;
+    height: 20px;
+    width: 20px;
+    font-size: 12px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 20px;
+    background: #fdb91a;
+    border-radius: 50%;
+}
+#header .cart:hover {
+    cursor: pointer;
+}
+#header .cart .card-sh {
+    float: left;
+    margin-top: 2.5%;
+    margin-left: 5px;
+    font-family: 'Lato', sans-serif;
+    color: #7d7d7f;
+    font-size: 15px;
+}
+#header .cart .card-sh span {
+    float: left;
+    margin-top: 2.5%;
+    color: #212121;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bolder;
+}
+#menu {
+    margin-top: 2.5%;
+    width: 100%;
+    height: 50px;
+    background: #fdb91a;
+    float: left;
+}
+#menu .menu {
+    float: left;
+    list-style-type: none;
+}
+
+#menu .menu a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #212121;
+    font-weight: bolder;
+}
+#menu .menu a:hover {
+    color: white;
+    margin: 0;
+    background: #212121;
+}
+#menu .menu li {
+    font-family: 'Nunito', sans-serif;
+    float: left;
+    padding: 0 50px 0 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #212121;
+}
+#menu .menu li:hover {
+    background: #212121;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Автомобільні коврики</title>
+    <link rel="stylesheet" href="../public/css/shop.css">
+</head>
+
+<body>
+<%- include('blocks/header'); -%>
+<div class="category">
+<h1>Категорії</h1>
+    <ul>
+        <% cat.forEach(function (cat) { %>
+        <a href="/shop1/:<%= cat._id %> "> <li> <%= cat.name%> </li> </a>
+        <% }); %>
+    </ul>
+</div>
+<div >
+    <% jas.forEach(function(jas) { %>
+        <div class="produ">
+            <a href="/"><img src="<%= jas.picture %>"></a>
+            <h3><%=  jas.brand  %></h3>
+            <h1><a href="/product/:<%= jas._id %>"><%= jas.name %></a></h1>
+            <bdi>
+                <%= jas.price %>
+            </bdi>
+
+        </div>
+    <% }); %>
+</div>
+
+</body>
+</html>

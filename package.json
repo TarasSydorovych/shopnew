@@ -1,0 +1,25 @@
+{
+    "name": "untitled4",
+    "version": "1.0.0",
+    "description": "new app",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js",
+        "pretify": "./node_modules/.bin/prettier --config ./.prettierrc.js -c"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.0",
+        "ejs": "^3.1.8",
+        "eslint": "^8.23.0",
+        "express": "^4.18.1",
+        "mongodb": "^4.9.0",
+        "mongoose": "^6.5.4",
+        "prettier": "^2.7.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.19"
+    }
+}

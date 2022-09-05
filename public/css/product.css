@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #f6f6f6;
+}
+
+.block_pick {
+    float: left;
+    width: 55%;
+    height: 600px;
+    background: white;
+    margin-top: 5%;
+    margin-left: 8%;
+}
+.block_pick h1 {
+    float: left;
+    margin-left: 8%;
+    margin-top: 5%;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+.block_pick img {
+    float: left;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.block_descript {
+    float: left;
+    width: 25%;
+    height: 400px;
+    background: white;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+.block_descript h1 {
+    float: left;
+    font-size: 20px;
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-right: 2%;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+.block_descript h2 {
+    float: left;
+    font-size: 15px;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-right: 20%;
+    font-family: 'Montserrat', sans-serif;
+}
+.block_descript bdi {
+    float: left;
+    font-size: 40px;
+    margin-top: 15%;
+    margin-left: 4%;
+    color: #fdb91a;
+    font-family: 'Montserrat', sans-serif;
+}
+.block_descript p {
+    float: left;
+    font-size: 25px;
+    margin-top: 19%;
+    margin-left: 5%;
+    color: #169543;
+    font-family: 'Montserrat', sans-serif;
+}
+.block_descript button {
+    float: left;
+    width: 20%;
+    height: 30px;
+}
+/* чека бокс товар */
+
+.quantity {
+    padding: 0 30px;
+    float: left;
+    position: relative;
+    background-color: #f6f6f6;
+}
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+.quantity input[type='number'] {
+    width: 30px;
+    height: 45px;
+    line-height: 45px;
+    border: 0;
+    text-align: center;
+    background-color: transparent;
+    padding: 0;
+    -moz-appearance: textfield;
+}
+.quantity .quantity-button.quantity-up:before {
+    width: 1px;
+    height: 7px;
+    top: 20px;
+    left: 15px;
+}
+.quantity .quantity-button:after,
+.quantity .quantity-button:before {
+    background-color: #626262;
+}
+
+/*Чек бокс товар кінець*/

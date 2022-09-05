@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Автомобільні коврики</title>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+<%- include('blocks/header'); -%>
+<div class="pres1">
+    <img src="./public/img/kovr.jpg">
+    <h1>Коврики в салон</h1>
+    <p>На будь яке авто</p>
+    <button><a>Купити</a></button>
+</div>
+<div class="pres">
+    <img src="./public/img/kovr.jpg">
+    <h1>Коврики в салон</h1>
+    <p>На будь яке авто</p>
+    <button><a>Купити</a></button>
+</div>
+<div class="pres">
+    <img src="./public/img/kovr.jpg">
+    <h1>Коврики в салон</h1>
+    <p>На будь яке авто</p>
+    <button><a>Купити</a></button>
+</div>
+<div class="scroll">
+    <h1>ЩО МИ ПРОПОНУЄМО  </h1>
+    <ul>
+    <a href="/"><li>АКЦІЙНІ ЦІНИ</li></a>
+    <a href="/"><li>ТОП ТОВАРИ</li></a>
+    <a href="/"><li>СПИСОК ТОВАРІВ</li></a>
+    </ul>
+    <div class="line"></div>
+</div>
+<div >
+    <% jas.forEach(function(jas) { %>
+<div class="produ">
+    <a href="/"><img src="<%= jas.picture %>"></a>
+    <h3><%=  jas.brand  %></h3>
+    <h1><a href="/product/:<%= jas._id %>"><%= jas.name %></a></h1>
+    <bdi>
+        <%= jas.price %>
+    </bdi>
+
+</div>
+        <% }); %>
+</div>
+
+</body>
+</html>
