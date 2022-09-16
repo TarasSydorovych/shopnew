@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <title>Автомобільні коврики</title>
@@ -19,16 +19,24 @@
     <h1> <%= product.name  %></h1>
     <h2> <%= product.description%>></h2>
     <bdi><%= product.price %> $</bdi>
-    <p> <%= product.stock%> </p>
+    <p> <%= product.stock %> </p>
 
     <div class="quantity">
-        <label class="screen-reader-text" for="quantity_63120788828d6"></label>
-        <input type="number" id="quantity_63120788828d6" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Кол-во" size="4" placeholder="" inputmode="numeric">
-        <span class="quantity-button quantity-up"></span><span class="quantity-button quantity-down"></span></div>
+        <form method="post">
+
+            <input type="text" id="name123" name="name" value='1'>
+        <button type="submit" onclick="myFunction()" >Add</button>
+        </form>
+<script>
+    function myFunction() {
+       alert('Товар додано в корзину')
+    }
+</script>
 
 
-    <button>В корзину</button>
+</div>
 </div>
 
-</body>
+ </body>
+
 </html>

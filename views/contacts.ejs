@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Автомобільні коврики</title>
+    <link rel="stylesheet" href="../public/css/contact.css">
+</head>
+
+<body>
+<%- include('blocks/header'); -%>
+<h1>Контакти</h1>
+<div class="contact">
+    <h2>Контакти</h2>
+
+</div>
+<div class="contForm">
+    <form method="post" action="/contacts">
+        <label for="fname">Ваше ім'я</label><br>
+        <input type="text" id="name" name="name" value="Name"><br>
+        <label for="lemail">email:</label><br>
+        <input type="email" id="email" name="email" value="email"><br><br>
+        <button id="buttonSub" type="submit" onclick="myFunction()">Відправити</button>
+    </form>
+<script>
+    function myFunction() {
+       window.alert('Ваші дані успішно введені')
+    }
+
+
+</script>
+
+
+</div>
+
+
+
+</body>
+</html>

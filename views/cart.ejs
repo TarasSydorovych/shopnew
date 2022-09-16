@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Автомобільні коврики</title>
+    <link rel="stylesheet" href="../public/css/cart.css">
+</head>
+
+<body>
+<%- include('blocks/header'); -%>
+<div class="prod">
+
+<table>
+    <tr>
+        <td>Товар</td>
+        <td>Ціна</td>
+        <td>Кількість</td>
+        <td>Сума</td>
+        <td></td>
+    </tr>
+
+    <% product.forEach(function(product) { %>
+    <tr>
+        <form id="form1"  method="post">
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td><button name="oneMin" value="<%= product._id %>">-</button> <input name="inputValue" oninput="myFunction()" value="<%= product.count %>">  <button name="onePlus" value="<%= product._id %>">+</button></td>
+        <td><%= product.count * product.price %></td>
+        <td> <button id="confirm" name="conf" type="submit" value="<%= product._id %>" onclick="" hidden></button></td>
+        <td><button id="vas" type="submit" name="butDelete" value="<%= product._id %>" onclick="" >Delete</button></td>
+
+        </form>
+    </tr>
+
+    <% }); %>
+
+</table>
+
+</div>
+<script>
+    try{
+
+        function  myFunction(){
+            let k =   document.getElementById('confirm');
+            setTimeout(() => {
+                k.click();
+            }, 1000)
+        }
+    }catch (err){
+        console.log(err)
+    }
+
+
+</script>
+
+</body>
+</html>

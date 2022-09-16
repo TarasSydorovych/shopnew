@@ -1,16 +1,17 @@
 const { MongoClient } = require('mongodb')
 const { Router } = require('express')
+const url = 'mongodb://0.0.0.0:27017/'
+const shopsController = new Router();
 
-const shopsController = new Router()
-
-shopsController.get('/', function (req, res) {
+shopsController.get('/shop1', function (req, res) {
     MongoClient.connect(url, function (err, db) {
-        if (err) throw err
+        if (err) throw res.sendStatus(500);
         let dbo = db.db('shop')
         let dbo1 = db.db('shop')
         dbo.collection('product')
             .find()
             .toArray(function (err, result) {
+                if (err) throw res.sendStatus(500);
                 dbo1.collection('category')
                     .find()
                     .toArray(function (err, result1) {
@@ -19,37 +20,17 @@ shopsController.get('/', function (req, res) {
             })
     })
 })
-
-module.exports = shopsController
-
-app.get('/shop1', function (req, res) {
+shopsController.get('/shop1/:id', function (req, res) {
     MongoClient.connect(url, function (err, db) {
-        if (err) throw err
-        let dbo = db.db('shop')
-        let dbo1 = db.db('shop')
-        dbo.collection('product')
-            .find()
-            .toArray(function (err, result) {
-                dbo1.collection('category')
-                    .find()
-                    .toArray(function (err, result1) {
-                        res.render('shop1', { jas: result, cat: result1 })
-                    })
-            })
-    })
-})
-app.get('/shop1/:id', function (req, res) {
-    MongoClient.connect(url, function (err, db) {
-        if (err) throw err
+        if (err) throw res.sendStatus(500);
         let dbo = db.db('shop')
         let dbo1 = db.db('shop')
         let objBase
         dbo1.collection('category')
             .find()
             .toArray(function (err, result1) {
+                if (err) throw res.sendStatus(500);
                 for (let i = 0; i < result1.length; i++) {
-                    console.log('результ' + result1[i]._id)
-                    console.log('змінна' + req.params.id)
                     if (':' + result1[i]._id === req.params.id) {
                         objBase = result1[i].name
                     }
@@ -62,3 +43,4 @@ app.get('/shop1/:id', function (req, res) {
             })
     })
 })
+module.exports = shopsController

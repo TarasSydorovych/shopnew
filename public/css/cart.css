@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #f6f6f6;
+}
+.prod {
+    float: left;
+    width: 80%;
+    height: 300px;
+    margin-top: 2%;
+    margin-left: 5%;
+    background: white;
+}
+table {
+    float: left;
+   width: 50%;
+}
