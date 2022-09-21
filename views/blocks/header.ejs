@@ -16,7 +16,7 @@
     </div>
     <div class="cart">
         <a href="/cart"> <img src="../public/img/cart.png"></a>
-        <div class="counter">2</div>
+        <div class="counter"> <p id="coun1">2</p></div>
         <div class="card-sh">
          Корзина <br>
             <span>
@@ -35,4 +35,20 @@
 
     </ul>
     </div>
+<script>
+
+    const arr2 = [];
+    let value=0;
+    if(localStorage.key(0) !== null) {
+        for (let i = 0; i < localStorage.length; i++) {
+            arr2.push(localStorage.key(i))
+            value += +localStorage.getItem(arr2[i])
+
+        }
+
+    }
+document.getElementById('coun1').innerText = value;
+
+
+</script>
  </header>

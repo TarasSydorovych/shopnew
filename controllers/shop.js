@@ -4,6 +4,7 @@ const url = 'mongodb://0.0.0.0:27017/'
 const shopsController = new Router();
 
 shopsController.get('/shop1', function (req, res) {
+
     MongoClient.connect(url, function (err, db) {
         if (err) throw res.sendStatus(500);
         let dbo = db.db('shop')

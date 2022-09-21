@@ -20,14 +20,15 @@
     </tr>
 
     <% product.forEach(function(product) { %>
+
     <tr>
         <form id="form1"  method="post">
         <td><%= product.name %></td>
         <td><%= product.price %></td>
-        <td><button name="oneMin" value="<%= product._id %>">-</button> <input name="inputValue" oninput="myFunction()" value="<%= product.count %>">  <button name="onePlus" value="<%= product._id %>">+</button></td>
+        <td><button name="oneMin" value="<%= product._id %>">-</button> <input id="jak" name="inputValue" oninput="myFunction()" value="<%= product.count %>">  <button name="onePlus" value="<%= product._id %>">+</button></td>
         <td><%= product.count * product.price %></td>
         <td> <button id="confirm" name="conf" type="submit" value="<%= product._id %>" onclick="" hidden></button></td>
-        <td><button id="vas" type="submit" name="butDelete" value="<%= product._id %>" onclick="" >Delete</button></td>
+        <td><button id="vas" type="submit" name="butDelete" value="<%= product._id %>" onclick="delFunction()" >Delete</button></td>
 
         </form>
     </tr>
@@ -38,6 +39,25 @@
 
 </div>
 <script>
+    function delFunction(){
+        let remove = document.getElementById('vas').value;
+        localStorage.removeItem(remove);
+    }
+    const arr=[];
+    const arr1=[];
+
+    let mod2 = document.querySelectorAll('#vas');
+    let mod1 = document.querySelectorAll('#jak');
+for(let i = 0; i<mod2.length; i++){
+    arr1.push(mod1[i].value);
+    arr.push(mod2[i].value);
+    localStorage.setItem(arr[i], arr1[i])
+    console.log('Localstorage', localStorage.getItem(arr[i]))
+}
+
+    console.log(arr,arr1)
+
+
     try{
 
         function  myFunction(){
