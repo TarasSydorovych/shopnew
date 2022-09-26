@@ -25,10 +25,10 @@
         <form id="form1"  method="post">
         <td><%= product.name %></td>
         <td><%= product.price %></td>
-        <td><button name="oneMin" value="<%= product._id %>">-</button> <input id="jak" name="inputValue" oninput="myFunction()" value="<%= product.count %>">  <button name="onePlus" value="<%= product._id %>">+</button></td>
+        <td><button name="oneMin" value="<%= product._id %>">-</button> <input id="jak" name="inputValue" oninput="myFunction('<%= product._id %>')" value="<%= product.count %>">  <button name="onePlus" value="<%= product._id %>">+</button></td>
         <td><%= product.count * product.price %></td>
-        <td> <button id="confirm" name="conf" type="submit" value="<%= product._id %>" onclick="" hidden></button></td>
-        <td><button id="vas" type="submit" name="butDelete" value="<%= product._id %>" onclick="delFunction()" >Delete</button></td>
+        <td> <button id="<%= product._id %>" name="conf" type="submit" value="<%= product._id %>" onclick="" hidden></button></td>
+        <td><button id="vas" type="submit" name="butDelete" value="<%= product._id %>" onclick="delFunction(value)" >Delete</button></td>
 
         </form>
     </tr>
@@ -39,9 +39,9 @@
 
 </div>
 <script>
-    function delFunction(){
-        let remove = document.getElementById('vas').value;
-        localStorage.removeItem(remove);
+    function delFunction(id){
+
+        localStorage.removeItem(id);
     }
     const arr=[];
     const arr1=[];
@@ -55,22 +55,14 @@ for(let i = 0; i<mod2.length; i++){
     console.log('Localstorage', localStorage.getItem(arr[i]))
 }
 
-    console.log(arr,arr1)
 
 
-    try{
-
-        function  myFunction(){
-            let k =   document.getElementById('confirm');
+        function  myFunction(id) {
+            let k = document.getElementById(id);
             setTimeout(() => {
                 k.click();
             }, 1000)
         }
-    }catch (err){
-        console.log(err)
-    }
-
-
 </script>
 
 </body>
